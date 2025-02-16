@@ -5,14 +5,35 @@ import numpy as np
 import tensorflow as tf
 import streamlit as st
 
+import os
+import json
+import gdown  # Import gdown for downloading the model
+from PIL import Image
+import numpy as np
+import tensorflow as tf
+import streamlit as st
+
 # Set up paths
 working_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(working_dir, "trained_model/plant_disease_prediction_model.h5")
+model_dir = os.path.join(working_dir, "trained_model")
+model_path = os.path.join(model_dir, "plant_disease_prediction_model.h5")
 class_indices_path = os.path.join(working_dir, "class_indices.json")
 
-# Load the pre-trained model and class indices
+# Ensure directory exists
+os.makedirs(model_dir, exist_ok=True)
+
+# Google Drive direct download link
+model_url = "https://drive.google.com/uc?id=1AGgEJj1hF5Sjiu_fUvFn6fwmhf6qbIZl"
+
+# Download model if not exists
+if not os.path.exists(model_path):
+    st.info("Downloading model, please wait...")
+    gdown.download(model_url, model_path, quiet=False)
+
+# Load the model
 model = tf.keras.models.load_model(model_path)
 class_indices = json.load(open(class_indices_path))
+
 
 # Define fertilizers for diseases
 disease_fertilizers = {
