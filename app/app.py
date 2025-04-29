@@ -31,7 +31,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # 🖼️ Set your background
-set_background('assets/background.jpg')  # Corrected path
+set_background('app/assets/background.jpg')  # Corrected path
 
 # --- Centered Title and Subheader in Black Color ---
 st.markdown(

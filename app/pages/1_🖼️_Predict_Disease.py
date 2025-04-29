@@ -112,7 +112,7 @@ def set_background(png_file):
     """
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('assets/disease_img.avif')  # Use forward slash
+set_background('app/assets/disease_img.avif')  # Use forward slash
 
 # Ensure models directory exists
 os.makedirs("models", exist_ok=True)
