@@ -1,0 +1,16 @@
+Date,Disease,Confidence
+2025-04-27 17:35:50,"Pepper,_bell___Bacterial_spot",99.99%
+2025-04-27 17:37:00,"Pepper,_bell___Bacterial_spot",99.99%
+2025-04-27 18:02:19,Tomato___Late_blight,99.94%
+2025-04-27 19:14:25,Tomato___Late_blight,99.94%
+2025-04-27 22:25:17,"Pepper,_bell___Bacterial_spot",99.99%
+2025-04-27 22:52:01,Tomato___Late_blight,99.94%
+2025-04-27 23:03:02,Tomato___Late_blight,99.94%
+2025-04-27 23:07:23,"Pepper,_bell___Bacterial_spot",99.99%
+2025-04-28 00:32:40,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,99.53%
+2025-04-29 19:45:47,Apple___healthy,100.00%
+2025-04-29 19:46:18,Potato___Early_blight,100.00%
+2025-04-29 19:46:46,Potato___Early_blight,100.00%
+2025-04-29 19:48:12,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,99.53%
+2025-04-29 19:48:15,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,99.53%
+2025-04-29 19:51:54,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),100.00%
