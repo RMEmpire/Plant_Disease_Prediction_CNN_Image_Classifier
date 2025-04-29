@@ -130,8 +130,12 @@ if not os.path.exists(model_path):
 # Load the model
 model = tf.keras.models.load_model(model_path)
 
+# Correcting the path to class_indices.json dynamically based on the script's directory
+current_dir = os.path.dirname(os.path.abspath(__file__))  # Get the current directory
+class_indices_path = os.path.join(current_dir, "models", "class_indices.json")
+
 # Load class indices
-with open("models/class_indices.json", "r") as f:
+with open(class_indices_path, "r") as f:
     class_indices = json.load(f)
 
 # Reverse mapping
