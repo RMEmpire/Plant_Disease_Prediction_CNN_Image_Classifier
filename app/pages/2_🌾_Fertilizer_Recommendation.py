@@ -31,7 +31,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # 🖼️ Set your background
-set_background('app/assets\Fertilizer_img2.jpg')  # Corrected path
+set_background('app/assets/Fertilizer_img2.jpg')  # Corrected path
 fertilizer_mapping = {
     "Apple___Apple_scab": "Use Mancozeb fungicide + Urea spray",
     "Apple___Black_rot": "Use Captan or Ziram + Nitrogen fertilizers",
