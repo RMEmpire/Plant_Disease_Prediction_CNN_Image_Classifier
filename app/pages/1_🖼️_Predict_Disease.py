@@ -81,7 +81,7 @@
 
 import streamlit as st
 import tensorflow as tf
-from keras.utils import load_img, img_to_array
+from tensorflow.keras.utils import load_img, img_to_array  # Fixed import
 import numpy as np
 import json
 import pandas as pd
@@ -99,20 +99,23 @@ def get_base64_of_bin_file(bin_file):
     return base64.b64encode(data).decode()
 
 def set_background(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = f"""
-    <style>
-    .stApp {{
-      background-image: url("data:image/png;base64,{bin_str}");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }}
-    </style>
-    """
-    st.markdown(page_bg_img, unsafe_allow_html=True)
+    if os.path.exists(png_file):
+        bin_str = get_base64_of_bin_file(png_file)
+        page_bg_img = f"""
+        <style>
+        .stApp {{
+          background-image: url("data:image/png;base64,{bin_str}");
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+        }}
+        </style>
+        """
+        st.markdown(page_bg_img, unsafe_allow_html=True)
+    else:
+        st.warning("⚠️ Background image not found.")
 
-set_background('app/assets/disease_img.avif')  # Use forward slash
+set_background('assets/disease_img.avif')  # Use correct relative path
 
 # Ensure models directory exists
 os.makedirs("models", exist_ok=True)
