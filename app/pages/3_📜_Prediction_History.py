@@ -25,7 +25,7 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # 🖼️ Set your background
-set_background('assets\Prediction History.jpg')  # Corrected path
+set_background('assets\Prediction_History.jpg')  # Corrected path
 # Display Prediction History
 if os.path.exists('history/prediction_logs.csv'):
     df = pd.read_csv('history/prediction_logs.csv')
