@@ -115,7 +115,7 @@ def set_background(png_file):
     else:
         st.warning("⚠️ Background image not found.")
 
-set_background('assets/disease_img.avif')  # Use correct relative path
+set_background('app/assets/disease_img.avif')  # Use correct relative path
 
 # Ensure models directory exists
 os.makedirs("models", exist_ok=True)
